@@ -1,0 +1,276 @@
+Starting Nmap 7.80 ( https://nmap.org ) at 2020-05-08 13:06 India Standard Time
+
+NSE: Loaded 151 scripts for scanning.
+
+NSE: Script Pre-scanning.
+
+Initiating NSE at 13:06
+
+Completed NSE at 13:06, 0.00s elapsed
+
+Initiating NSE at 13:06
+
+Completed NSE at 13:06, 0.02s elapsed
+
+Initiating NSE at 13:06
+
+Completed NSE at 13:06, 0.00s elapsed
+
+Initiating Ping Scan at 13:06
+
+Scanning 10.10.10.148 [4 ports]
+
+Completed Ping Scan at 13:06, 1.30s elapsed (1 total hosts)
+
+Initiating Parallel DNS resolution of 1 host. at 13:06
+
+Completed Parallel DNS resolution of 1 host. at 13:06, 0.06s elapsed
+
+Initiating SYN Stealth Scan at 13:06
+
+Scanning 10.10.10.148 [1000 ports]
+
+Discovered open port 22/tcp on 10.10.10.148
+
+Discovered open port 8011/tcp on 10.10.10.148
+
+Increasing send delay for 10.10.10.148 from 0 to 5 due to 289 out of 721 dropped probes since last increase.
+
+Discovered open port 9999/tcp on 10.10.10.148
+
+Completed SYN Stealth Scan at 13:07, 27.71s elapsed (1000 total ports)
+
+Initiating Service scan at 13:07
+
+Scanning 3 services on 10.10.10.148
+
+Completed Service scan at 13:09, 150.14s elapsed (3 services on 1 host)
+
+Initiating OS detection (try #1) against 10.10.10.148
+
+Retrying OS detection (try #2) against 10.10.10.148
+
+Retrying OS detection (try #3) against 10.10.10.148
+
+Retrying OS detection (try #4) against 10.10.10.148
+
+Retrying OS detection (try #5) against 10.10.10.148
+
+Initiating Traceroute at 13:10
+
+Completed Traceroute at 13:10, 0.34s elapsed
+
+Initiating Parallel DNS resolution of 2 hosts. at 13:10
+
+Completed Parallel DNS resolution of 2 hosts. at 13:10, 0.05s elapsed
+
+NSE: Script scanning 10.10.10.148.
+
+Initiating NSE at 13:10
+
+Completed NSE at 13:10, 25.77s elapsed
+
+Initiating NSE at 13:10
+
+Completed NSE at 13:10, 3.58s elapsed
+
+Initiating NSE at 13:10
+
+Completed NSE at 13:10, 0.00s elapsed
+
+Nmap scan report for 10.10.10.148
+
+Host is up (0.51s latency).
+
+Not shown: 997 closed ports
+
+PORT     STATE SERVICE    VERSION
+
+22/tcp   open  ssh        OpenSSH 7.6p1 Ubuntu 4ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+
+| ssh-hostkey: 
+
+|   2048 56:84:89:b6:8f:0a:73:71:7f:b3:dc:31:45:59:0e:2e (RSA)
+
+|   256 76:43:79:bc:d7:cd:c7:c7:03:94:09:ab:1f:b7:b8:2e (ECDSA)
+
+|_  256 b3:7d:1c:27:3a:c1:78:9d:aa:11:f7:c6:50:57:25:5e (ED25519)
+
+8011/tcp open  tcpwrapped
+
+9999/tcp open  abyss?
+
+| fingerprint-strings: 
+
+|   GetRequest, HTTPOptions: 
+
+|     HTTP/1.1 200 OK
+
+|     Accept-Ranges: bytes
+
+|     Cache-Control: no-cache
+
+|     Content-length: 4871
+
+|     Content-type: text/html
+
+|     <!DOCTYPE html>
+
+|     <html lang="en">
+
+|     <head>
+
+|     <title>Login V10</title>
+
+|     <meta charset="UTF-8">
+
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+|     <!--===============================================================================================--> 
+
+|     <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+
+|     <!--===============================================================================================-->
+
+|     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+
+|     <!--===============================================================================================-->
+
+|     <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+
+|_    <!--===============================================
+
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+
+SF-Port9999-TCP:V=7.80%I=7%D=5/8%Time=5EB50C25%P=i686-pc-windows-windows%r
+
+SF:(GetRequest,1378,"HTTP/1\.1\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\n
+
+SF:Cache-Control:\x20no-cache\r\nContent-length:\x204871\r\nContent-type:\
+
+SF:x20text/html\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=\"en\">\r\n<hea
+
+SF:d>\r\n\t<title>Login\x20V10</title>\r\n\t<meta\x20charset=\"UTF-8\">\r\
+
+SF:n\t<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20initi
+
+SF:al-scale=1\">\r\n<!--==================================================
+
+SF:=============================================-->\t\r\n\t<link\x20rel=\"
+
+SF:icon\"\x20type=\"image/png\"\x20href=\"images/icons/favicon\.ico\"/>\r\
+
+SF:n<!--==================================================================
+
+SF:=============================-->\r\n\t<link\x20rel=\"stylesheet\"\x20ty
+
+SF:pe=\"text/css\"\x20href=\"vendor/bootstrap/css/bootstrap\.min\.css\">\r
+
+SF:\n<!--=================================================================
+
+SF:==============================-->\r\n\t<link\x20rel=\"stylesheet\"\x20t
+
+SF:ype=\"text/css\"\x20href=\"fonts/font-awesome-4\.7\.0/css/font-awesome\
+
+SF:.min\.css\">\r\n<!--===============================================")%r
+
+SF:(HTTPOptions,1378,"HTTP/1\.1\x20200\x20OK\r\nAccept-Ranges:\x20bytes\r\
+
+SF:nCache-Control:\x20no-cache\r\nContent-length:\x204871\r\nContent-type:
+
+SF:\x20text/html\r\n\r\n<!DOCTYPE\x20html>\r\n<html\x20lang=\"en\">\r\n<he
+
+SF:ad>\r\n\t<title>Login\x20V10</title>\r\n\t<meta\x20charset=\"UTF-8\">\r
+
+SF:\n\t<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20init
+
+SF:ial-scale=1\">\r\n<!--=================================================
+
+SF:==============================================-->\t\r\n\t<link\x20rel=\
+
+SF:"icon\"\x20type=\"image/png\"\x20href=\"images/icons/favicon\.ico\"/>\r
+
+SF:\n<!--=================================================================
+
+SF:==============================-->\r\n\t<link\x20rel=\"stylesheet\"\x20t
+
+SF:ype=\"text/css\"\x20href=\"vendor/bootstrap/css/bootstrap\.min\.css\">\
+
+SF:r\n<!--================================================================
+
+SF:===============================-->\r\n\t<link\x20rel=\"stylesheet\"\x20
+
+SF:type=\"text/css\"\x20href=\"fonts/font-awesome-4\.7\.0/css/font-awesome
+
+SF:\.min\.css\">\r\n<!--===============================================");
+
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+
+TCP/IP fingerprint:
+
+OS:SCAN(V=7.80%E=4%D=5/8%OT=22%CT=1%CU=34986%PV=Y%DS=2%DC=T%G=Y%TM=5EB50CF6
+
+OS:%P=i686-pc-windows-windows)SEQ(SP=105%GCD=1%ISR=10D%TI=Z%CI=I%II=I)SEQ(C
+
+OS:I=I%II=I)OPS(O1=M54DST11NW7%O2=M54DST11NW7%O3=M54DNNT11NW7%O4=M54DST11NW
+
+OS:7%O5=M54DST11NW7%O6=M54DST11)WIN(W1=7120%W2=7120%W3=7120%W4=7120%W5=7120
+
+OS:%W6=7120)ECN(R=Y%DF=Y%T=40%W=7210%O=M54DNNSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%
+
+OS:S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%
+
+OS:RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W
+
+OS:=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)
+
+OS:U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%D
+
+OS:FI=N%T=40%CD=S)
+
+
+
+Uptime guess: 0.000 days (since Fri May 08 13:10:00 2020)
+
+Network Distance: 2 hops
+
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+
+IP ID Sequence Generation: All zeros
+
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+
+
+TRACEROUTE (using port 3306/tcp)
+
+HOP RTT       ADDRESS
+
+1   222.00 ms 10.10.14.1
+
+2   331.00 ms 10.10.10.148
+
+
+
+NSE: Script Post-scanning.
+
+Initiating NSE at 13:10
+
+Completed NSE at 13:10, 0.00s elapsed
+
+Initiating NSE at 13:10
+
+Completed NSE at 13:10, 0.00s elapsed
+
+Initiating NSE at 13:10
+
+Completed NSE at 13:10, 0.00s elapsed
+
+Read data files from: C:\Program Files (x86)\Nmap
+
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+
+Nmap done: 1 IP address (1 host up) scanned in 248.09 seconds
+
+           Raw packets sent: 1875 (86.914KB) | Rcvd: 3789 (1.700MB)
+
